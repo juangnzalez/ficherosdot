@@ -24,7 +24,6 @@ set backspace=2
 " Colores y Fuentes
 syntax enable
 colorscheme zenburn
-"set background=dark
 set encoding=utf8
 set ffs=unix,dos,mac
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -48,26 +47,12 @@ set wrap
 " Status line
 set laststatus=2
 
-" Spell check
-map <leader>ss :setlocal spell!<cr>
-
-function! HasPaste()
-        if &paste
-                    return 'PASTE MODE  '
-        en
-        return ''
-endfunction
-
 execute pathogen#infect()
 
 function! AbrirMarked()
   silent !open -a "Marked 2.app" '%:p'
   redraw!
 endfunction
-
-" Teclas
-
-:nnoremap <leader>m :call AbrirMarked()<cr>
 
 
 call plug#begin('~/.vim/plugged')
@@ -101,8 +86,16 @@ nnoremap <Leader><Right> <C-W><C-L>
 nnoremap <Leader><Left> <C-W><C-H>
 nnoremap <Leader><Up> <C-W><C-K>
 nnoremap <Leader><Down> <C-W><C-J>
-" NerdTree Toggle
-map <F5> :NERDTreeToggle<CR>
+
+" NerdTree Toggle con Espacio + f(inder)
+map <Leader>f :NERDTreeToggle<CR>
 
 " Abrir splitv con cal
 nnoremap <Leader>cal :Calendar -view=year -split=vertical -width=27<CR>
+
+" Abrir Marked
+nnoremap <leader>m :call AbrirMarked()<CR>
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
