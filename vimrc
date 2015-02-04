@@ -15,6 +15,7 @@ set autoread
 " Interface
 set wildmenu
 set ruler
+set number
 set cmdheight=2
 set ignorecase
 set smartcase
@@ -83,6 +84,12 @@ let g:calendar_monday = 1
 """"""""""""""""""""""""""""""""""""
 """""""""""" TECLAS """"""""""""""""
 """"""""""""""""""""""""""""""""""""
+" Movimiento entre líneas de forma NATURAL
+nnoremap j gj
+nnoremap k gk
+
+" Salir de INSERT MODE con jk
+imap jk <Esc>
 
 " VSplit y HSplit
 nnoremap <Leader>v :vsplit<CR>
@@ -107,7 +114,7 @@ nnoremap <Leader>cal :Calendar -view=year -split=vertical -width=27<CR>
 " Abrir Marked
 nnoremap <leader>m :call AbrirMarked()<CR>
 
-" Move visual block
+" Move visual block. Muy bueno. Para colocar párrafos
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
