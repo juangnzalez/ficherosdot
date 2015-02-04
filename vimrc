@@ -17,9 +17,11 @@ set wildmenu
 set ruler
 set cmdheight=2
 set ignorecase
+set smartcase
 set magic
 set showmatch
 set backspace=2
+set mousehide
 
 " Colores y Fuentes
 syntax enable
@@ -69,6 +71,15 @@ call plug#end()
 " Desactiva folding en plug markdown
 let g:vim_markdown_folding_disabled=1
 
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+
+" Calendar empieza la semana en Lunes
+let g:calendar_monday = 1
+
 """"""""""""""""""""""""""""""""""""
 """""""""""" TECLAS """"""""""""""""
 """"""""""""""""""""""""""""""""""""
@@ -99,3 +110,12 @@ nnoremap <leader>m :call AbrirMarked()<CR>
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Spell
+map <Leader>ss :setlocal spell spelllang=es_ES<CR>
+map <Leader>sn :setlocal nospell<CR>
+
+" Para el trabajo: entrecomillar
+nnoremap <Leader>i :%s/^/'<CR>
+nnoremap <Leader>f :%s/$/',<CR>
+
