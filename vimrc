@@ -27,6 +27,7 @@ set mousehide
 " Colores y Fuentes
 syntax enable
 colorscheme zenburn
+set background=dark
 set encoding=utf8
 set ffs=unix,dos,mac
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
