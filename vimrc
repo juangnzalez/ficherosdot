@@ -66,6 +66,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/calendar.vim'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
