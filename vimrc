@@ -21,7 +21,6 @@ set ignorecase
 set smartcase
 set magic
 set showmatch
-set backspace=2
 set mousehide
 
 " Colores y Fuentes
@@ -43,8 +42,9 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
+set textwidth=79
 set lbr
-set tw=500
+set tw=20
 set ai
 set si
 set wrap
