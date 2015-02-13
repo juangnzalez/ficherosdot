@@ -93,6 +93,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'nvie/vim-flake8'
 
 call plug#end()
 
@@ -104,8 +105,8 @@ let g:calendar_monday = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " " If you want :UltiSnipsEdit to split your window
 let g:UltiSnipsEditSplit="vertical"
