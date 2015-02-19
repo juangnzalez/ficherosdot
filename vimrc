@@ -136,7 +136,7 @@ nnoremap <Leader><Up> <C-W><C-K>
 nnoremap <Leader><Down> <C-W><C-J>
 
 " NerdTree Toggle con Espacio + f(inder)
-map <Leader>f :NERDTreeToggle<CR>
+map <Leader>t :NERDTreeToggle<CR>
 
 " Abrir splitv con cal
 nnoremap <Leader>cal :Calendar -view=year -split=vertical -width=27<CR>
