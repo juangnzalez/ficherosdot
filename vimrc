@@ -48,6 +48,8 @@ set tw=20
 set ai
 set si
 set wrap
+" no continua comentario en línea siguiente
+au FileType * set fo-=cro
 
 " Status line
 set laststatus=2
