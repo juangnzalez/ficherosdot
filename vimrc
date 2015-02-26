@@ -44,12 +44,15 @@ set shiftwidth=4
 set tabstop=4
 set textwidth=79
 set lbr
-set tw=20
 set ai
 set si
 set wrap
 " no continua comentario en línea siguiente
 au FileType * set fo-=cro
+" desactivar indentación 
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 " Status line
 set laststatus=2
