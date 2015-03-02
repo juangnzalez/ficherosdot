@@ -50,6 +50,12 @@ set lbr
 set ai
 set si
 set wrap
+" no continua comentario en línea siguiente
+au FileType * set fo-=cro
+" desactivar indentación 
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 " Status line
 set laststatus=2
