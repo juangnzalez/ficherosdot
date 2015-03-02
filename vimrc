@@ -31,6 +31,9 @@ set background=dark
 set encoding=utf8
 set ffs=unix,dos,mac
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+set guifont=AnonymousPro:h14
+set guioptions=aAce
+" set columns=100
 
 " Ficheros, backup
 set nobackup
@@ -44,7 +47,6 @@ set shiftwidth=4
 set tabstop=4
 set textwidth=79
 set lbr
-set tw=20
 set ai
 set si
 set wrap
