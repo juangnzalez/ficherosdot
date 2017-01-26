@@ -25,13 +25,13 @@ set mousehide
 
 " Colores y Fuentes
 syntax enable
-colorscheme zenburn
-call togglebg#map("<F5>")
-set background=dark
+colorscheme pablo
+"call togglebg#map("<F5>")
+"set background=dark
 set encoding=utf8
 set ffs=unix,dos,mac
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-set guifont=AnonymousPro:h14
+set guifont=Menlo:h12
 set guioptions=aAce
 " set columns=100
 
@@ -43,7 +43,7 @@ set noswapfile
 " Texto, tab
 set expandtab
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 set tabstop=4
 set textwidth=79
 set lbr
@@ -60,64 +60,52 @@ set showmode
 " Status line
 set laststatus=2
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 
 """""""""""""""""""""""""""""""""""""""
 """""""""""" FUNCIONES """"""""""""""""
 """""""""""""""""""""""""""""""""""""""
 
-function! AbrirMarked()
-  silent !open -a "Marked 2.app" '%:p'
-  redraw!
-endfunction
-
-function! NuevoPost(args)
-   let fich= "/Users/juan/Dropbox/BLOG/juangnzalez.github.io/_posts/" . strftime("%Y-%m-%d") . "-" . tolower(substitute(a:args, " ", "-", "g")) . ".md"
-   exe "e!" . fich
-   let g:titulo = a:args
-endfunction
-
-function! GuardarPost(args)
-   let fich = "/Users/juan/Dropbox/BLOG/juangnzalez.github.io/_posts/" . strftime("%Y-%m-%d") . "-" . tolower(substitute(a:args, " ", "-", "g")) . ".md"
-   exe "w!" . fich
-   let g:titulo= a:args
-endfun
-
-command! -nargs=1 NuevoPost call NuevoPost("<args>")
-command! -nargs=1 GuardarPost call GuardarPost("<args>")
+"function! AbrirMarked()
+"  silent !open -a "Marked 2.app" '%:p'
+"  redraw!
+"endfunction
 
 """"""""""""""""""""""""""""""""""""
 """""""""""" PLUGINS """""""""""""""
 """"""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
+call plug#begin('c:\Archivos de programa\Vim\vimfiles\plugin\')
 
-Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/goyo.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdtree'
-Plug 'itchyny/calendar.vim'
-Plug 'justinmk/vim-sneak'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'nvie/vim-flake8'
+"Plug 'dhruvasagar/vim-table-mode'
+Plug 'gabrielelana/vim-markdown'
+Plug 'godlygeek/tabular'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'junegunn/goyo.vim'
+"Plug 'plasticboy/vim-markdown'
+"Plug 'bling/vim-airline'
+"Plug 'scrooloose/nerdtree'
+"Plug 'itchyny/calendar.vim'
+"Plug 'justinmk/vim-sneak'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+"Plug 'nvie/vim-flake8'
 
 call plug#end()
 
 " Desactiva folding en plug markdown
-let g:vim_markdown_folding_disabled=1
+"let g:vim_markdown_folding_disabled=1
 
 " Calendar empieza la semana en Lunes
-let g:calendar_monday = 1
+"let g:calendar_monday = 1
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" Trigger configuration. Do not use <tab> if you use https://github.com/V"alloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " " If you want :UltiSnipsEdit to split your window
-let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsEditSplit="vertical"
 
 """"""""""""""""""""""""""""""""""""
 """""""""""" TECLAS """"""""""""""""
@@ -127,7 +115,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Salir de INSERT MODE con jk
-imap jk <Esc>
+inoremap <special> jj <ESC>
 
 " VSplit y HSplit
 nnoremap <Leader>v :vsplit<CR>
@@ -144,10 +132,10 @@ nnoremap <Leader><Up> <C-W><C-K>
 nnoremap <Leader><Down> <C-W><C-J>
 
 " NerdTree Toggle con Espacio + f(inder)
-map <Leader>t :NERDTreeToggle<CR>
+"map <Leader>t :NERDTreeToggle<CR>
 
 " Abrir splitv con cal
-nnoremap <Leader>cal :Calendar -view=year -split=vertical -width=27<CR>
+"nnoremap <Leader>cal :Calendar -view=year -split=vertical -width=27<CR>
 
 " Abrir Marked
 nnoremap <leader>m :call AbrirMarked()<CR>
@@ -170,5 +158,5 @@ nmap <Leader>a <Plug>(EasyAlign)
 nnoremap <Leader>i :%s/^/'<CR>
 nnoremap <Leader>f :%s/$/',<CR>
 
-nnoremap <Leader>np :NuevoPost   
-nnoremap <Leader>gp :GuardarPost
+"nnoremap <Leader>np :NuevoPost   
+"nnoremap <Leader>gp :GuardarPost
