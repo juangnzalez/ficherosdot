@@ -25,7 +25,7 @@ set mousehide
 
 " Colores y Fuentes
 syntax enable
-colorscheme pablo
+colorscheme bluish
 "call togglebg#map("<F5>")
 "set background=dark
 set encoding=utf8
@@ -67,20 +67,20 @@ set laststatus=2
 """""""""""" FUNCIONES """"""""""""""""
 """""""""""""""""""""""""""""""""""""""
 
-"function! AbrirMarked()
-"  silent !open -a "Marked 2.app" '%:p'
-"  redraw!
-"endfunction
+function! AbrirMarked()
+  silent !open -a "Marked 2.app" '%:p'
+  redraw!
+endfunction
 
 """"""""""""""""""""""""""""""""""""
 """""""""""" PLUGINS """""""""""""""
 """"""""""""""""""""""""""""""""""""
-call plug#begin('c:\Archivos de programa\Vim\vimfiles\plugin\')
+call plug#begin('/Users/juan/Dropbox/plugins')
 
 "Plug 'dhruvasagar/vim-table-mode'
 Plug 'gabrielelana/vim-markdown'
 Plug 'godlygeek/tabular'
-"Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align'
 "Plug 'junegunn/goyo.vim'
 "Plug 'plasticboy/vim-markdown'
 "Plug 'bling/vim-airline'
@@ -160,3 +160,6 @@ nnoremap <Leader>f :%s/$/',<CR>
 
 "nnoremap <Leader>np :NuevoPost   
 "nnoremap <Leader>gp :GuardarPost
+"ploblema con DELETE
+set backspace=2
+set nospell
