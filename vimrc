@@ -1,4 +1,4 @@
-" Mi leaderKey pasa a ser Space
+"" Mi leaderKey pasa a ser Space
 let mapleader = "\<Space>"
 
 filetype plugin on
@@ -75,11 +75,11 @@ set laststatus=2
 """"""""""""""""""""""""""""""""""""
 """""""""""" PLUGINS """""""""""""""
 """"""""""""""""""""""""""""""""""""
-call plug#begin('c:\Archivos de programa\Vim\vimfiles\plugin\')
+"call plug#begin('c:\Archivos de programa\Vim\vimfiles\plugin\')
 
 "Plug 'dhruvasagar/vim-table-mode'
-Plug 'gabrielelana/vim-markdown'
-Plug 'godlygeek/tabular'
+"Plug 'gabrielelana/vim-markdown'
+"Plug 'godlygeek/tabular'
 "Plug 'junegunn/vim-easy-align'
 "Plug 'junegunn/goyo.vim'
 "Plug 'plasticboy/vim-markdown'
@@ -91,7 +91,7 @@ Plug 'godlygeek/tabular'
 "Plug 'honza/vim-snippets'
 "Plug 'nvie/vim-flake8'
 
-call plug#end()
+"call plug#end()
 
 " Desactiva folding en plug markdown
 "let g:vim_markdown_folding_disabled=1
