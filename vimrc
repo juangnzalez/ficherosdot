@@ -114,8 +114,14 @@ call plug#end()
 nnoremap j gj
 nnoremap k gk
 
-" Salir de INSERT MODE con jk
+" Salir de INSERT MODE con jj
 inoremap <special> jj <ESC>
+
+" Guardar con ww en INSERT MODE
+inoremap ww <ESC>:w<CR>
+
+" Guardar con w
+nnoremap <Leader>w :w<CR>
 
 " VSplit y HSplit
 nnoremap <Leader>v :vsplit<CR>
